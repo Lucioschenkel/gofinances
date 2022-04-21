@@ -1,11 +1,12 @@
-import React from "react";
-import { Platform } from "react-native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { MaterialIcons } from "@expo/vector-icons";
+import React from 'react';
+import { Platform } from 'react-native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { MaterialIcons } from '@expo/vector-icons';
 
-import { Dashboard } from "../screens/Dashboard";
-import { Register } from "../screens/Register";
-import { useTheme } from "styled-components";
+import { Dashboard } from '../screens/Dashboard';
+import { Register } from '../screens/Register';
+import { useTheme } from 'styled-components';
+import { Summary } from '../screens/Summary';
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -18,10 +19,10 @@ export function AppRoutes() {
         headerShown: false,
         tabBarActiveTintColor: theme.colors.secondary,
         tabBarInactiveTintColor: theme.colors.text,
-        tabBarLabelPosition: "beside-icon",
+        tabBarLabelPosition: 'beside-icon',
         tabBarStyle: {
           height: 88,
-          paddingVertical: Platform.OS === "ios" ? 20 : 0,
+          paddingVertical: Platform.OS === 'ios' ? 20 : 0,
         },
       }}
     >
@@ -49,7 +50,7 @@ export function AppRoutes() {
       />
       <Screen
         name="Resumo"
-        component={Register}
+        component={Summary}
         options={{
           tabBarIcon: ({ size, color }) => (
             <MaterialIcons name="pie-chart" size={size} color={color} />

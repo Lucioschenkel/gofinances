@@ -1,16 +1,16 @@
-import styled, { css } from "styled-components/native";
-import { Feather } from "@expo/vector-icons";
-import { RFValue } from "react-native-responsive-fontsize";
-import theme from "../../../global/styles/theme";
-import { RectButton, RectButtonProps } from "react-native-gesture-handler";
+import styled, { css } from 'styled-components/native';
+import { Feather } from '@expo/vector-icons';
+import { RFValue } from 'react-native-responsive-fontsize';
+import theme from '../../../global/styles/theme';
+import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
 
 interface IconProps {
-  type: "up" | "down";
+  type: 'up' | 'down';
 }
 
 interface ContainerProps extends RectButtonProps {
   isActive: boolean;
-  type: "up" | "down";
+  type: 'up' | 'down';
 }
 
 const activeColors = {
@@ -29,7 +29,7 @@ export const Container = styled(RectButton)<ContainerProps>`
   justify-content: center;
 
   background-color: ${({ type, isActive }) =>
-    isActive ? activeColors[type] : "transparent"};
+    isActive ? activeColors[type] : 'transparent'};
 
   ${({ isActive }) =>
     isActive
@@ -51,5 +51,5 @@ export const Icon = styled(Feather)<IconProps>`
   margin-right: 12px;
 
   color: ${({ type, theme }) =>
-    type === "up" ? theme.colors.success : theme.colors.attention};
+    type === 'up' ? theme.colors.success : theme.colors.attention};
 `;

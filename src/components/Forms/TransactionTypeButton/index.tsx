@@ -1,15 +1,15 @@
-import React from "react";
-import { RectButtonProps } from "react-native-gesture-handler";
+import React from 'react';
+import { RectButtonProps } from 'react-native-gesture-handler';
 
-import { Container, Title, Icon } from "./styles";
+import { Container, Title, Icon } from './styles';
 
 const icons = {
-  up: "arrow-up-circle",
-  down: "arrow-down-circle",
+  up: 'arrow-up-circle',
+  down: 'arrow-down-circle',
 };
 
 interface Props extends RectButtonProps {
-  type: "up" | "down";
+  type: 'up' | 'down';
   title: string;
   isActive: boolean;
 }
